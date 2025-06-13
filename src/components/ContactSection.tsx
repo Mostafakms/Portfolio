@@ -61,7 +61,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ id = "contact" }) => {
     <section id={id} className="py-20 px-4 md:px-8 bg-background">
       <div className="container mx-auto max-w-3xl">
         <div className="text-center mb-12">
-          <a href="/cv.pdf" download className="inline-block mb-6 px-6 py-2 bg-primary text-primary-foreground font-semibold rounded-lg shadow hover:bg-primary/90 transition-colors">Download CV</a>
+          
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Have a project in mind or want to discuss potential opportunities? Feel free to reach out through my contact information or social media below.
