@@ -69,7 +69,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                 </Button>
                 <Button
                   size="lg"
-                  variant="outline"
+                  variant="default"
                   asChild
                   className="font-medium flex-1"
                 >

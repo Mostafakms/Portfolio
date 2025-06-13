@@ -7,25 +7,9 @@ import SkillsSection from "./SkillsSection";
 import ContactSection from "./ContactSection";
 
 const Home = () => {
-  const [darkMode, setDarkMode] = useState(false);
-
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)",
-    ).matches;
-    const shouldUseDark = savedTheme === "dark" || (!savedTheme && prefersDark);
-
-    setDarkMode(shouldUseDark);
-    document.documentElement.classList.toggle("dark", shouldUseDark);
+    document.documentElement.classList.add("dark");
   }, []);
-
-  const toggleDarkMode = () => {
-    const newDarkMode = !darkMode;
-    setDarkMode(newDarkMode);
-    document.documentElement.classList.toggle("dark", newDarkMode);
-    localStorage.setItem("theme", newDarkMode ? "dark" : "light");
-  };
 
   return (
     <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
@@ -74,32 +58,8 @@ const Home = () => {
             >
               Contact
             </motion.a>
-            <motion.button
-              onClick={toggleDarkMode}
-              className="p-2 rounded-full hover:bg-muted transition-colors"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              {darkMode ? (
-                <Sun className="h-5 w-5" />
-              ) : (
-                <Moon className="h-5 w-5" />
-              )}
-            </motion.button>
           </div>
           <div className="flex items-center space-x-2 md:hidden">
-            <motion.button
-              onClick={toggleDarkMode}
-              className="p-2 rounded-full hover:bg-muted transition-colors"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              {darkMode ? (
-                <Sun className="h-4 w-4" />
-              ) : (
-                <Moon className="h-4 w-4" />
-              )}
-            </motion.button>
             <button>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
