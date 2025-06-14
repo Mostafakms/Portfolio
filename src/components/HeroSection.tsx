@@ -73,7 +73,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                   asChild
                   className="font-medium flex-1"
                 >
-                  <a href="/cv.pdf" download>
+                  <a href="https://drive.google.com/file/d/1iaNrdYtFnxthZXuy8dvaBBXdGFZfn6Mz/view?usp=sharing" download>
                     <Download className="inline-block mr-2 h-5 w-5" />
                     Download CV
                   </a>
